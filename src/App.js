@@ -1,18 +1,14 @@
 import {BrowserRouter as Router , Route, Routes} from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header.jsx';
-import LeftSideBar from "./components/LeftSide/LeftSideBar.jsx";
+import Hero from "./components/HeroSection/Hero.jsx";
 
 function App() {
   return (
     <>
     <Router>
       <Header/>
-      <LeftSideBar/>
-      <Routes>
-        <Route path="/" />
-      </Routes>
-
+      <Hero/>
     </Router>
     </>
   );

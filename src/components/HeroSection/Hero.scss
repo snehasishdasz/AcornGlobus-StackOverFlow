@@ -1,0 +1,15 @@
+.hero-section
+{
+    background: #f7f7f7;
+    display: flex;
+    gap: 4.5rem;
+}
+.left-sidebar
+{
+    width: 19%;
+    padding: 4rem 0 1rem 4rem;
+    height: 89vh;
+    position: sticky;
+    top: 74px;
+    overflow-y: auto;
+}
