@@ -40,6 +40,7 @@
   padding: 3px 15px;
   display: flex;
   align-items: center;
+  font-size: 0.7rem;
 }
 
 #minus 
@@ -111,6 +112,29 @@
   padding: 12px;
   border-radius: 6px;
   overflow: scroll;
+}
+.questions-description img 
+{
+  max-width: 600px;
+}
+@media only screen and (max-width: 768px) 
+{
+  .questions-description pre 
+  {
+    display: none;
+  }
+  .questions-description p 
+  {
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 6px;
+    overflow: auto; 
+    white-space: pre-wrap; 
+  }
+  .questions-description img
+  {
+    display: none;
+  }
 }
 .compiler 
 {
