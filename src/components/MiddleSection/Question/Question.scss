@@ -1,0 +1,185 @@
+.questions-section
+{
+  max-width: 800px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 2rem;
+}
+.questions-container 
+{
+  background-color: #fff;
+}
+.questions-heading
+{
+  background-color: #f38023;
+  color: #fff;
+  border-radius: 5px;
+
+}
+.question-title
+{
+  padding: 2rem;
+  display: flex;
+  border-bottom: 1px solid #fff;
+  justify-content: space-between;
+}
+.question-title h3 
+{
+  display: flex;
+  width: 65%;
+}
+
+.question-title .number
+{
+  display: flex;
+  justify-content: flex-end;
+}
+.question-title .number p
+{
+  border: 1px solid #fff;
+  padding: 3px 15px;
+  display: flex;
+  align-items: center;
+}
+
+#minus 
+{
+  border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+#num
+{
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+#plus
+{
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.question-author-details
+{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.author-desc
+{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.author-desc img 
+{
+  height: 35px;
+  border-radius: 50%;
+}
+.author-desc div 
+{
+  background-color: #f3974f;
+  border-radius: 7px;
+  padding: 6px 15px;
+}
+.question-asked-time
+{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.div-line
+{
+  height: 20px;
+  width: 1.5px;
+  background: #fff;
+}
+
+.questions-description
+{
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.compiler 
+{
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #e6eaed;
+}
+.questions-description a
+{
+  color: #f38023;
+}
+
+.question-footer
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.save-ques 
+{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #f38023;
+  font-weight: 600;
+}
+.save-ques img
+{
+  height: 32px;
+  cursor: pointer;
+}
+.share-comment 
+{
+  display: flex;
+  gap: 1.5rem;
+}
+.share-comment img
+{
+  height: 25px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+  .left-sidebar
+  {
+    display: none;
+  }
+  .right-sidebar
+  {
+    display: none;
+  }
+  .hero-section
+  {
+    padding: 1rem;
+  }
+  .question-title
+  {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .question-author-details
+  {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .question-title h3
+  {
+    width: 100%;
+  }
+  .question-title .number
+  {
+    justify-content: center;
+  }
+  .questions-section
+  {
+    width: 100%;
+  } 
+}
