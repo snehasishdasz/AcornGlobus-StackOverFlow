@@ -77,7 +77,7 @@ const Question = () => {
 
         {questionData && (
           <div className='questions-description'>
-            <p> {parse(questionData.body)} </p>
+            <pre> {parse(questionData.body)} </pre>
           </div>
         )}
 
