@@ -1,0 +1,117 @@
+.answers-section
+{
+    max-width: 800px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .answers-container
+    {
+        display: flex;
+        flex-direction: column;
+        .ans-nav
+        {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            p
+            {
+                font-size: 1.3rem;
+            }
+            .nav 
+            {
+                display: flex;
+                gap: 1rem;
+
+                p
+                {
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+                #active 
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.7rem;
+                    color: orange;
+                    font-weight: 600;
+                    span 
+                    {
+                        height: 5px;
+                        border-radius: 5px;
+                        color: orange;
+                        background: orange;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .ans-author-details
+        {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e6eaed;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            .auth-det
+            {
+                display: flex;
+                gap: 1rem;
+
+                div 
+                {
+                    display: flex;
+                }
+                #name 
+                {
+                    color: #f38023;
+                    font-weight: 600;
+                }
+            }
+
+            .btn
+            {
+                display: flex;
+                color: #fff;
+                p 
+                {
+                    border: 1px solid #fff;
+                    padding: 6px 15px;
+                    background: #f38023;
+                    display: flex;
+                    align-items: center;
+                }
+                #minus 
+                {
+                    border-radius: 5px 0px 0px 5px;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                }
+                #num
+                {
+                    padding: 0 25px;
+                    display: flex;
+                    align-items: center;
+                }
+                #plus
+                {
+                    border-radius: 0px 5px 5px 0px;
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+
+        .answer-desc
+        {
+            padding: 2rem;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
