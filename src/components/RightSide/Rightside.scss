@@ -1,0 +1,57 @@
+.right-side
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.linked-ques-sec
+{
+    .linked-ques-container
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+        .linked-heading
+        {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .linked-ques-sect
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .linked-ques
+            {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                padding: 0rem 6.2rem 0rem 1.2rem;
+                cursor: pointer;
+
+                .no 
+                {
+                    background: #eaeaea;
+                    padding: 10px 15px;
+                }
+                .no p
+                {
+                    font-size: 14px;
+                }
+                .active 
+                {
+                    background: orange;
+                    color: #fff;
+                    padding: 10px 15px;
+                }
+                .ques
+                {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
