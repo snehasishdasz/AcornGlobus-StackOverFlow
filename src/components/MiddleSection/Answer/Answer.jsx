@@ -7,8 +7,6 @@ const Answer = () => {
   return (
     <div className='answers-section'>
       <div className="answers-container">
-
-
         <div className="ans-nav">
           <p> 20 Answers </p>
           <div className="nav">

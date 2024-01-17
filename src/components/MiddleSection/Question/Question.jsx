@@ -10,39 +10,47 @@ import parse from 'html-react-parser';
 
 const Question = () => {
   const [questionData, setQuestionData] = useState(null);
+  const [voteCount, setVoteCount] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://api.stackexchange.com/2.3/posts?order=desc&sort=activity&site=stackoverflow&filter=!*Mg4Pjfe.L-lW1pv'
-        );
-        const data = await response.json();
-        // Assuming the API response is an array of questions
-        if (data.items && data.items.length > 0) {
-          setQuestionData(data.items[0]); // Use the first question for demonstration
+    fetchQuestion();
+  }, []); 
+
+  const fetchQuestion = async () => {
+    if (loading) return;
+
+    try {
+      setLoading(true);
+
+      const response = await fetch(
+        'https://api.stackexchange.com/2.3/posts?order=desc&sort=activity&site=stackoverflow&filter=!*Mg4Pjfe.L-lW1pv'
+      );
+      const data = await response.json();
+
+      if (data.items && data.items.length > 0) {
+        setQuestionData(data.items[0]);
+        if (data.items[0].score) {
+          setVoteCount(data.items[0].score);
         }
-      } catch (error) {
-        console.error('Error fetching data:', error);
       }
-    };
-
-    fetchData();
-  }, []);
-
-  const [voteCount, setVoteCount] = useState(103);
-
-  useEffect(() => {
-    // Assuming 'questionData' has information about votes
-    if (questionData && questionData.score) {
-      setVoteCount(questionData.score);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setLoading(false);
     }
-  }, [questionData]);
+  };
+
+  const handleNextQuestion = () => {
+    fetchQuestion();
+  };
 
   return (
     <div className="questions-section">
       <div className="questions-container">
-
+      <button onClick={handleNextQuestion} disabled={loading}>
+      {loading ? 'Loading...' : 'Next Question'}
+      </button>
         <div className="questions-heading">
           <div className="question-title">
             <h3> {questionData ? questionData.title : 'Loading...'} </h3>
@@ -77,7 +85,7 @@ const Question = () => {
 
         {questionData && (
           <div className='questions-description'>
-            <pre> {parse(questionData.body)} </pre>
+            <p> {parse(questionData.body)} </p>
           </div>
         )}
 

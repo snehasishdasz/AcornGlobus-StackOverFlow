@@ -27,10 +27,9 @@ const LinkedQues = () => {
             <div className="linked-heading">
                 <p> Linked </p>
             </div>
-
             <div className="linked-ques-sect">
                 {
-                    linkedQuestions.slice(0, 5).map((question, index) => (
+                    linkedQuestions.slice(0 , 5).map((question, index) => (
                         <div className="linked-ques">
                         <div className={`linked-ques ${index === 3 ? 'active' : 'no'}`}> <p> 2 </p> </div>
                         <div className="ques">
@@ -40,6 +39,7 @@ const LinkedQues = () => {
                     )
                 )}
             </div> 
+            
         </div>
     </div>
   )
