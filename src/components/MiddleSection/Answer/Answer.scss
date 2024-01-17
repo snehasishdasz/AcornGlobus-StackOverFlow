@@ -115,3 +115,16 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px)
+{
+    .compiler
+    {
+        padding: 0;
+    }
+    .compiler p
+    {
+        padding: 1rem;
+    }   
+}
