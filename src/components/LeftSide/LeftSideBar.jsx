@@ -25,7 +25,6 @@ const LeftSideBar = () => {
                 <a href="/"> Users </a>
               </div>
             )}
-          <a href="/"> <AiOutlineGlobal size={20} /> <p> Public </p> </a>
           <a href="/"> <AiOutlineTeam size={20} /> <p> Collectives </p> </a>
           <a href="/"> <HiOutlineBriefcase size={20} /> <p> Jobs </p> </a>
         </div>
