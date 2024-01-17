@@ -20,7 +20,7 @@ const Answer = () => {
       setLoading(true);
 
       const response = await fetch(
-        'https://api.stackexchange.com/2.3/answers?order=desc&sort=activity&site=stackoverflow&filter=!nNPvSNdWme'
+        'https://api.stackexchange.com/2.3/answers?order=desc&sort=activity&site=stackoverflow&filter=!nNPvSNdWme&key=7MiRd6oixzz5sRtQP3X5hQ(('
       );
       const data = await response.json();
 

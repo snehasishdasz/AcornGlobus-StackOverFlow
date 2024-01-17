@@ -24,7 +24,7 @@ const Question = () => {
       setLoading(true);
 
       const response = await fetch(
-        'https://api.stackexchange.com/2.3/posts?order=desc&sort=activity&site=stackoverflow&filter=!*Mg4Pjfe.L-lW1pv'
+        'https://api.stackexchange.com/2.3/posts?order=desc&sort=activity&site=stackoverflow&filter=!*Mg4Pjfe.L-lW1pv&key=7MiRd6oixzz5sRtQP3X5hQ(('
       );
       const data = await response.json();
 
